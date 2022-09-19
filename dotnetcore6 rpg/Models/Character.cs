@@ -12,7 +12,7 @@
         public RpgClass RpgClass { get; set; } = RpgClass.Knight;
 
         public User? User { get; set; }
-        public Weapon? weapon { get; set; }
+        public Weapon? Weapon { get; set; }
         public List<Skill> Skills { get; set; }
     }
 }

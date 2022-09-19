@@ -1,4 +1,5 @@
-﻿using dotnetcore6_rpg.Dtos.Weapon;
+﻿using dotnetcore6_rpg.Dtos.Skill;
+using dotnetcore6_rpg.Dtos.Weapon;
 
 namespace dotnetcore6_rpg.Dtos.Character
 {
@@ -13,5 +14,6 @@ namespace dotnetcore6_rpg.Dtos.Character
 
         public RpgClass RpgClass { get; set; } = RpgClass.Knight;
         public GetWeaponDto Weapon { get; set; }
+        public List<GetSkillDto> Skills { get; set; }
     }
 }

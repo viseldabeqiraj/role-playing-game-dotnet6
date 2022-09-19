@@ -60,5 +60,21 @@ namespace dotnetcore6_rpg.Controllers
             }
             else return NotFound();
         }
+
+        [HttpPost("Skill")]
+        public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> AddCharacterSkill(AddCharacterSkillDto newCharacterSkill)
+        {
+            try
+            {
+                return Ok(_characterService.AddCharacterSkill(newCharacterSkill));
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+     
     }
 }
