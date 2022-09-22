@@ -1,4 +1,5 @@
 ﻿using dotnetcore6_rpg.Dtos.Character;
+using dotnetcore6_rpg.Dtos.Fights;
 using dotnetcore6_rpg.Dtos.Weapon;
 using dotnetcore6_rpg.Service.WeaponService;
 using Microsoft.AspNetCore.Authorization;
@@ -21,7 +22,7 @@ namespace dotnetcore6_rpg.Controllers
 
         [HttpPost]
 
-        public async Task<ActionResult<ServiceResponse<GetCharacterDto>>> AddWeapon(AddWeaponDto newWeapon)
+        public async Task<ActionResult<ServiceResponse<AttackResultDto>>> AddWeapon(AddWeaponDto newWeapon)
         {
             try
             {

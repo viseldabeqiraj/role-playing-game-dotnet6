@@ -2,6 +2,7 @@ global using dotnetcore6_rpg.Models;
 using dotnetcore6_rpg.Data;
 using dotnetcore6_rpg.Service.AuthService;
 using dotnetcore6_rpg.Service.CharacterService;
+using dotnetcore6_rpg.Service.FightService;
 using dotnetcore6_rpg.Service.WeaponService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +35,7 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly); //Added for Automapper
 builder.Services.AddScoped<ICharacterService, CharacterService>(); //added for DI 
 builder.Services.AddScoped<IAuthService, AuthService>(); //added for DI 
 builder.Services.AddScoped<IWeaponService, WeaponService>(); //added for DI 
+builder.Services.AddScoped<IFightService, FightService>(); //added for DI 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer (options =>
